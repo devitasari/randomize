@@ -1,0 +1,45 @@
+body {
+    background-image: url('https://i.pinimg.com/originals/e8/e9/4b/e8e94babd99327531fb2dc4cb4be54f9.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Lato', sans-serif;
+    margin: 0% 5%;
+}
+
+h1, p {
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+textarea {
+    background: #ebe2dc;
+    border: none;
+    font-family: 'Lato', sans-serif;
+}
+
+input {
+    font-family: 'Lato', sans-serif;
+    background-color: #E1835B;
+}
+
+button {
+    margin-left: 5px;
+    background-color: #E1835B;
+    padding: 5px auto;
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.result {
+    padding: 10px;
+    background: #ebe2dc;
+    line-height: 80%;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <title>Result</title>
+</head>
+
+<body>
+    <h1>Hasil</h1>
+    <p>Berikut hasil dari penyusunan secara acak dari <%= data.length %> data...</p>
+    <form action="/" method="POST" class="center">
+        <input name="data" value="<%= data.join('\n')%>" type="hidden">
+        <input type="submit" value="acak lagi !!"><button><a id="download_link" download="hasilAcak.txt" href=””>Download Hasil</a></button><button><a href="/">home</a></button>
+    </form>
+    <br>
+    <div class="result">
+        <% data.forEach((e,i)=> { %>
+            <p style="text-align: left;">
+                <%= `${i+1}. ${e}` %>
+            </p>
+            <% }) %>
+    </div>
+    <br>
+    <br>
+</body>
+
+<script>
+
+    let text = document.getElementsByClassName('result')[0].innerText;
+    let data2 = new Blob([text], { type: 'text/plain' });
+
+    let url = window.URL.createObjectURL(data2);
+
+    document.getElementById('download_link').href = url;
+</script>
+
+</html>
